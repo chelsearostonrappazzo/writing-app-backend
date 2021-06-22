@@ -13,5 +13,10 @@ class StoriesController < ApplicationController
       description: params[:description],
       user_id: current_user.id
     )
+    if @story.save 
+      render json: Story.find(@story.id)
+    else
+      render json: {errors: @story.errors.full_messages}
+    end
   end
 end
