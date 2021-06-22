@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::API
-  protect_from_forgery with: :exception, if: -> { request.format.html? }
 
   def current_user
     auth_headers = request.headers["Authorization"]
@@ -18,8 +17,6 @@ class ApplicationController < ActionController::API
       end
     end
   end
-
-  helper_method :current_user
 
   def authenticate_user
     unless current_user
