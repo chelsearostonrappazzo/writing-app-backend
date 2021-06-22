@@ -1,5 +1,5 @@
 class StorySerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :chapters, :characters
+  attributes :id, :title, :description, :chapters, :characters, :author
   def chapters 
     self.object.chapters.map do |chapter|
       {title: chapter.title,
@@ -19,5 +19,11 @@ class StorySerializer < ActiveModel::Serializer
         age: character.age
       }
     end
+  end
+
+  def author 
+    {author_id: self.object.user.id,
+    author_name: self.object.user.name}
+
   end
 end
