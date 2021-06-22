@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   get "/stories" => "stories#index"
   get "/stories/:id" => "stories#show"
 
+  get "/parties" => "parties#index"
+  get "/parties" => "parties#show"
 
+  get "stories/:id/characters" => "characters#index"
+  get "characters/:id" => "characters#show"
 
-
-
+  get "stories/:id/chapters" => "chapters#index"
+  get "chapters/:id" => "chapters#show"
 
 end

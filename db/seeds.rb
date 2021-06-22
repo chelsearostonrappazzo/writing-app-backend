@@ -16,4 +16,6 @@
 #   'Are you alright, Ms. Gardiner?' Her partner's tone was his usual--barely controlled vexation. And usually at her expense. Mr. Owen Keating stood over a desiccated corpse, the tips of his wingtip shoes encroaching on the pool of blood. He looked to her sharply, green eyes narrowing on the wobbly state of her legs.
 #   ", story_id: 1)
 
-Party.create!(name: )
+# Party.create!(name: "Gaslight Me")
+
+PartyMember.create!(user_id: 1, party_id: 1)

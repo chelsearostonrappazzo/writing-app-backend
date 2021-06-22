@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :stories, 
+  attributes :id, :name, :email, :stories, :parties
   def stories 
     self.object.stories.map do |story|
       {id: story.id,
@@ -7,6 +7,13 @@ class UserSerializer < ActiveModel::Serializer
       description: story.description,
       chapters: story.chapters,
       characters: story.characters}
+    end
+  end
+
+  def parties 
+    self.object.parties.map do |party|
+      {id: party.id,
+      name: party.name}
     end
   end
 end
