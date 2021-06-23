@@ -17,7 +17,18 @@ class ChaptersController < ApplicationController
     if @chapter.save
       render json: Story.find(story_id)
     else
-      render json: {errors: @chapter.errors.full_messages}
+      render json: {errors: @chapter.errors.full_messages}, status: 406
+    end
+  end
+
+  def update 
+    @chapter = Chapter.find(params[:id])
+    @chapter.title = params[:title] || @chapter.title
+    @chapter.body = params[:body] || @chapter.body
+    if @chapter.save
+      render json: Chapter.find(params[:id])
+    else
+      render json: {errors: @chapter.errors.full_messages}, status: 406
     end
   end
 end

@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   get "stories/:id/chapters" => "chapters#index"
   get "chapters/:id" => "chapters#show"
   post "stories/:id/chapters" => "chapters#create"
+  patch "chapters/:id" => "chapters#update"
 
+  get "tropes" => "prompts#trope"
 end
