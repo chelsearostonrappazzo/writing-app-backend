@@ -1,0 +1,2 @@
+class Trope < ApplicationRecord
+end

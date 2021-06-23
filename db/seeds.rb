@@ -18,4 +18,24 @@
 
 # Party.create!(name: "Gaslight Me")
 
-PartyMember.create!(user_id: 1, party_id: 1)
+# PartyMember.create!(user_id: 1, party_id: 1)
+# seed_file = Rails.root.join('db', 'seeds', 'archetypes.yaml')
+# config = YAML::load_file(seed_file)
+
+# config.map do |conf|
+#   Archetype.create!(name: conf)
+# end
+
+# seed_file = Rails.root.join('db', 'seeds', 'tropes.yaml')
+# config = YAML::load_file(seed_file)
+
+# config.map do |conf|
+#   Trope.create!(name: conf)
+# end
+
+# seed_file = Rails.root.join('db', 'seeds', 'settings.yaml')
+# config = YAML::load_file(seed_file)
+
+# config.map do |conf|
+#   Setting.create!(name: conf)
+# end
