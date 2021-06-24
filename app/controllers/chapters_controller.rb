@@ -1,6 +1,6 @@
 class ChaptersController < ApplicationController
   def index 
-    render json: Chapter.where(story_id: params[:id])
+    render json: Chapter.where(story_id: params[:id]).order(created_at: :asc)
   end
 
   def show 
@@ -26,7 +26,7 @@ class ChaptersController < ApplicationController
     @chapter.title = params[:title] || @chapter.title
     @chapter.body = params[:body] || @chapter.body
     if @chapter.save
-      render json: Chapter.find(params[:id])
+      render json: @chapter
     else
       render json: {errors: @chapter.errors.full_messages}, status: 406
     end
