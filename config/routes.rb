@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 
   get "stories/:id/chapters" => "chapters#index"
   get "chapters/:id" => "chapters#show"
-  post "stories/:id/chapters" => "chapters#create"
-  patch "chapters/:id" => "chapters#update"
+  post "stories/:id/characters" => "characters#create"
+  patch "characters/:id" => "characters#update"
 
   get "trope" => "tropes#show"
   get "archetype" => "archetypes#show"
