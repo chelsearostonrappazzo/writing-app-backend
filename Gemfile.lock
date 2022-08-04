@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:chelsearostonrappazzo/balm.git
+  revision: 93b1081b9e762877d45acc1660eaa4164673abdb
+  specs:
+    balm (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,7 +65,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    balm (0.2.2)
     bcrypt (3.1.16)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
@@ -148,10 +153,11 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   active_model_serializers (~> 0.9.4)
-  balm
+  balm!
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
