@@ -11,7 +11,7 @@ class ChaptersController < ApplicationController
     story_id = params[:id]
     @chapter = Chapter.new(
       title: params[:title],
-      body: params[:body],
+      json: params[:json],
       story_id: story_id
     )
     if @chapter.save
@@ -24,7 +24,7 @@ class ChaptersController < ApplicationController
   def update 
     @chapter = Chapter.find(params[:id])
     @chapter.title = params[:title] || @chapter.title
-    @chapter.body = params[:body] || @chapter.body
+    @chapter.json = params[:json] || @chapter.json
     if @chapter.save
       render json: @chapter
     else

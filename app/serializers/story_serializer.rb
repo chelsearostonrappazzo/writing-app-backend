@@ -3,7 +3,7 @@ class StorySerializer < ActiveModel::Serializer
   def chapters 
     self.object.chapters.map do |chapter|
       {title: chapter.title,
-        body: chapter.body,
+        json: chapter.json,
         id: chapter.id,
         story_id: chapter.story_id
       }

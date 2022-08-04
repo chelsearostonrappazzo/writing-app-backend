@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   post "stories/:id/characters" => "characters#create"
   patch "characters/:id" => "characters#update"
 
+  post "stories/:id/chapters" => "chapters#create"
+
   get "trope" => "balms#trope"
   get "archetypes" => "balms#archetypes"
   get "setting" => "balms#setting"

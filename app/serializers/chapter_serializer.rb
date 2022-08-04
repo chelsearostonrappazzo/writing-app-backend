@@ -1,3 +1,3 @@
 class ChapterSerializer < ActiveModel::Serializer
-  attributes :id, :title, :body
+  attributes :id, :title, :json
 end
