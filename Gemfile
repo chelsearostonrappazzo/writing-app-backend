@@ -38,5 +38,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jwt'
 gem 'active_model_serializers', '~> 0.9.4'
-gem "balm", git: "git@github.com:chelsearostonrappazzo/balm.git"
+gem "balm"
 gem 'yaml'
